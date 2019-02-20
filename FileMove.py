@@ -1,25 +1,19 @@
-import os,time, datetime
-
+import os
 import shutil
-import re, glob, os
 
 file_extension = '.docx'
-sourcepath = 'C:\\Users\\mhkhan\\Desktop\\Test'
-destinationpath = 'C:\\Users\\mhkhan\\Desktop\\Test'
-
-sourcefiles = os.listdir(sourcepath)
-
+sourcePath = 'C:\\Users\\mhkhan\\Desktop\\Test'
+destinationPath = 'C:\\Users\\mhkhan\\Desktop\\Test'
+sourceFiles = os.listdir(sourcePath)
 countFiles = 0
 
-from os.path import join
-
-for (dirname, dirs, files) in os.walk(sourcepath):
-   for file in files:
-       if file.endswith(file_extension):
-            thefile = os.path.join(dirname,file)
-            sourceFile = os.path.join(sourcepath,file)
-            destinationFile = os.path.join(destinationpath,file)
-            shutil.move(thefile,destinationFile)
+for (dirName, dirs, files) in os.walk(sourcePath):
+    for file in files:
+        if file.endswith(file_extension):
+            theFile = os.path.join(dirName, file)
+            sourceFile = os.path.join(sourcePath, file)
+            destinationFile = os.path.join(destinationPath, file)
+            shutil.move(theFile, destinationFile)
 print('done')
 
 

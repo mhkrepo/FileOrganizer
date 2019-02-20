@@ -10,7 +10,6 @@ sourceFiles = os.listdir(sourcePath)
 #destinationPath = 'C:\\Users\\mhkhan\\Desktop\\pdf1'
 counter = 0
 
-
 for (dirName, dirs, files) in os.walk(sourcePath):
     for file in files:
 
